@@ -3,8 +3,8 @@ import os
 from os import listdir
 from os.path import isfile, join
 
-email=
-password=
+email=os.getenv("email")
+password=os.getenv("password")
 mega = Mega()
 mega._login_user(email,password)
                  
