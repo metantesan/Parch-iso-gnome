@@ -23,8 +23,8 @@ jobs:
         run: pacman -Sy; pacman --noconfirm -S git archiso python python-pip python-pygithub reflector
       - name: install pip pkg
         run: pip install mega.py
-      - name: Build image
-        run: mkarchiso -v iso/
+     # - name: Build image
+      #  run: mkarchiso -v iso/
       - name: Upload iso to the release
         run: python tools/upload_asset.py
 
