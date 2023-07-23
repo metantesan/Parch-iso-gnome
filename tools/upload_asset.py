@@ -7,5 +7,6 @@ email=os.getenv("email")
 password=os.getenv("password")
 mega = Mega()
 m = mega.login(email, password)
-filename = "data.csv"
-m.upload(filename)
+_path = list(Path().cwd().glob("out/*.iso"))[0]
+path = _path.as_posix()
+m.upload(path)
